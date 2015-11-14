@@ -1,0 +1,8 @@
+[submodule "example-docker-services-frontend"]
+	path = example-docker-services-frontend
+	url = git@github.com:valo/example-docker-services-frontend.git
+	branch = master
+[submodule "example-docker-services-grader"]
+	path = example-docker-services-grader
+	url = git@github.com:valo/example-docker-services-grader.git
+	branch = master

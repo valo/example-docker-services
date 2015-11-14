@@ -1,5 +1,5 @@
 frontend:
-  build: ./frontend
+  build: ./example-docker-services-frontend
   ports:
     - "4567:4567"
   links:
@@ -9,15 +9,15 @@ frontend:
     - AMPQ_ADDRESS=amqp://rabbitmq:5672
     - DATABASE_URL=postgres://postgres:mysecretpassword@postgres:5432
   volumes:
-    - ./frontend/:/app
+    - ./example-docker-services-frontend/:/app
 grader:
-  build: ./grader
+  build: ./example-docker-services-grader
   links:
     - rabbitmq
   environment:
     - AMPQ_ADDRESS=amqp://rabbitmq:5672
   volumes:
-    - ./grader/:/app
+    - ./example-docker-services-grader/:/app
 rabbitmq:
   image: rabbitmq
   ports:
