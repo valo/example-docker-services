@@ -13,6 +13,8 @@ The app consists of the following components:
   
 The app is fairly simple, but in order to run it you need one database server, one rabbitmq server, one app server for the sinatra app and two background processes. With docker-compose all this can be run with a single command:
 
-  $ docker-compose up
+```bash
+$ docker-compose up
+```
   
 Read more on my blog.
