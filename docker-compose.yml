@@ -1,0 +1,31 @@
+frontend:
+  build: ./frontend
+  ports:
+    - "4567:4567"
+  links:
+    - rabbitmq
+    - postgres
+  environment:
+    - AMPQ_ADDRESS=amqp://rabbitmq:5672
+    - DATABASE_URL=postgres://postgres:mysecretpassword@postgres:5432
+  volumes:
+    - ./frontend/:/app
+grader:
+  build: ./grader
+  links:
+    - rabbitmq
+  environment:
+    - AMPQ_ADDRESS=amqp://rabbitmq:5672
+  volumes:
+    - ./grader/:/app
+rabbitmq:
+  image: rabbitmq
+  ports:
+    - 5672
+postgres:
+  image: postgres:latest
+  ports:
+    - 5432
+  environment:
+    - POSTGRES_PASSWORD=mysecretpassword
+    - POSTGRES_USER=postgres
