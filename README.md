@@ -1,6 +1,6 @@
-# An example microservice app running with docker-compose
+# Source code grader
 
-This is an example microservice application that is running with [docker-compose](https://docs.docker.com/compose/).
+This is an example app built with microservices that can be run with [docker-compose](https://docs.docker.com/compose/).
 
 The app consists of the following components:
 * Frontend built with sinatra, which allows submitting source codes
