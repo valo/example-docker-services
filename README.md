@@ -17,4 +17,4 @@ The app is fairly simple, but in order to run it you need one database server, o
 $ docker-compose up
 ```
   
-Read more on my blog.
+Read more on my blog: https://www.valentinmihov.com/2015/11/15/microservices-dev-environment-with-docker/
